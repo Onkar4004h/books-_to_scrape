@@ -34,11 +34,13 @@ html_doc = """
  </body>
 </html>
 """
-soup = BeautifulSoup(html_doc, 'html.parser')
-# print(soup.p.b.string)
-# print(soup.title.parent.name)
-print(soup.prettify)
-x = soup.find_all('a')
-for i in x:
-    print(i.string)
+soup = BeautifulSoup(html_doc.strip(),'html.parser')
+head_tag=soup.head
+title_tag = head_tag.contents[1]
+text=title_tag.contents[0]
+for child in head_tag.descendants:
+    print(child)
+
+
+
 
