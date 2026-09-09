@@ -35,11 +35,7 @@ html_doc = """
 </html>
 """
 soup = BeautifulSoup(html_doc.strip(),'html.parser')
-head_tag=soup.head
-title_tag = head_tag.contents[1]
-text=title_tag.contents[0]
-for child in head_tag.descendants:
-    print(child)
+
 
 
 
