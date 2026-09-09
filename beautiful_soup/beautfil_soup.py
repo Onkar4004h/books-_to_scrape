@@ -35,7 +35,9 @@ html_doc = """
 </html>
 """
 soup = BeautifulSoup(html_doc.strip(),'html.parser')
-
+tag=soup.find_all('p')
+for x in tag:
+    print(x.get_text(" ",strip=True))
 
 
 
